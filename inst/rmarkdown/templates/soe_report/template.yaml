@@ -1,0 +1,4 @@
+name: SOE Report
+description: >
+ Template for creating a State of the Ecosystem Report
+create_dir: true
