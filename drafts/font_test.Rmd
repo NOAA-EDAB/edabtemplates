@@ -1,0 +1,160 @@
+---
+title:
+output:
+    pdf_document:
+      latex_engine: xelatex
+      keep_tex: yes
+      includes:
+        in_header: header.tex
+geometry: "left=2cm, right=2cm, top=2cm, bottom=3cm, footskip = .5cm"
+fontsize: 11pt
+mainfont: Garamond
+monofont: Calibri
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, dev = "cairo_pdf", fig.width = 8)
+```
+
+# `Introduction`
+
+\begin{figure}
+\centering
+\includegraphics[width=400pt]{gf_human_activities.png}
+\caption{Gulf of Maine and Georges bank ecosystem (I know it isn't the right figure...)}
+\label{fig:conceptual}
+\end{figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut **enim blandit volutpat** maecenas. Blandit turpis cursus in hac habitasse platea dictumst. Et netus et malesuada fames ac turpis egestas maecenas. Quis commodo odio aenean sed adipiscing diam. Sapien pellentesque habitant morbi tristique senectus. Gravida arcu ac tortor dignissim convallis aenean et. Vulputate enim nulla aliquet porttitor lacus luctus. Id venenatis a condimentum vitae sapien pellentesque habitant. Eu consequat ac felis donec et. Scelerisque eleifend donec pretium vulputate. Sed blandit libero volutpat sed cras ornare. Quis vel eros donec ac odio tempor orci.
+
+Mi eget mauris pharetra et ultrices neque ornare. Neque volutpat ac tincidunt vitae. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. **Ut tellus elementum sagittis vitae et leo duis. Ultrices neque ornare aenean euismod** elementum nisi quis eleifend quam. Convallis posuere morbi leo urna. Neque egestas congue quisque egestas diam. Figure \ref{fig:conceptual} ed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Sit amet tellus cras adipiscing enim. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Neque egestas congue quisque egestas diam. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Sit amet tellus cras adipiscing enim. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Felis bibendum ut tristique et egestas quis ipsum suspendisse.
+
+Mi eget mauris pharetra et ultrices neque ornare. Neque volutpat ac tincidunt vitae. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Ut tellus elementum sagittis vitae et leo duis. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Convallis posuere morbi leo urna. Neque egestas congue quisque egestas diam. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Sit amet tellus cras adipiscing enim. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Felis bibendum ut tristique et egestas quis ipsum suspendisse.
+
+
+Nisl condimentum id venenatis a condimentum vitae sapien. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Pellentesque habitant morbi tristique senectus et. Sollicitudin nibh sit amet commodo. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mauris a diam maecenas sed enim ut sem viverra aliquet. Blandit libero volutpat sed cras. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Risus nec feugiat in fermentum posuere urna. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Lectus mauris ultrices eros in cursus. Ut sem nulla pharetra diam sit. Sed viverra tellus in hac. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Nec dui nunc mattis enim ut tellus elementum. Dolor sed viverra ipsum nunc. Tempor nec feugiat nisl pretium fusce id velit. Mollis nunc sed id semper risus in. Egestas purus viverra accumsan in nisl.
+
+**Table 1**: New England ecosystem objectives
+```{r obj_cats_NE, echo = FALSE, message = FALSE, warnings = FALSE, results = 'asis'}
+
+tabl <- "
+| Objective Categories     | Indicators reported here                                  |
+|:-------------------------|:----------------------------------------------------------|
+| Seafood production       | Landings by feeding guild                                 |
+| Profits                  | Revenue by feeding guild                                  |
+| Recreation               | Number of anglers and trips; recreational catch           |
+| Stability                | Diversity indices (fishery and species)                   |
+| Social-Cultural          | Commercial and recreational reliance; social vulnerability|
+| Biomass                  | Biomass or abundance by feeding guild from surveys        |
+| Productivity             | Condition and recruitment of NEFMC managed species        |
+| Trophic structure        | Relative biomass of feeding guilds, primary productivity  |
+| Habitat                  | Thermal habitat projections, estimated habitat occurrence |
+"
+cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
+
+```
+
+
+Nisl condimentum id venenatis a condimentum vitae sapien. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Pellentesque habitant morbi tristique senectus et. Sollicitudin nibh sit amet commodo. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mauris a diam maecenas sed enim ut sem viverra aliquet. Blandit libero volutpat sed cras. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Risus nec feugiat in fermentum posuere urna. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Lectus mauris ultrices eros in cursus. Ut sem nulla pharetra diam sit. Sed viverra tellus in hac. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Nec dui nunc mattis enim ut tellus elementum. Dolor sed viverra ipsum nunc. Tempor nec feugiat nisl pretium fusce id velit. Mollis nunc sed id semper risus in. Egestas purus viverra accumsan in nisl.
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+library(extrafont)
+
+if(!"Arial Narrow" %in% fonts()) {
+  font_import(pattern = "ARIALN", prompt = FALSE)
+}
+
+df <- data.frame(a = c(rep("Ant",25),
+                       rep("Bat",25),
+                       rep("Cat",25)),
+                 x = rep((2018-24):2018, 3),
+                 y = c(rnorm(25, mean = 10, sd = 4),
+                       rnorm(25, mean = 2, sd = 1),
+                       rnorm(25, mean = 100, sd = 15)))
+
+rect_dat <- data.frame(xmin = max(df$x) - 9,
+                       xmax = Inf,
+                       ymin = -Inf,
+                       ymax = Inf)
+
+ggplot() +
+  geom_rect(data = rect_dat, aes(xmin = xmin,
+                                 xmax = xmax,
+                                 ymin = ymin,
+                                 ymax =ymax), fill = "grey40", alpha = 0.1) +
+  geom_point(data = df, aes(x, y)) +
+  geom_line(data = df, aes(x, y)) +
+  stat_smooth(data = df, formula = y ~ 1, aes(x = x, y = y, group = 1), method="lm", se = FALSE,
+            linetype = "longdash", color = "grey70") +
+  labs(x = "Year", 
+       y = "Indicator Value (T)",
+       title = "Sans font - theme_minimal()") + 
+  # theme_ipsum() +
+  theme_minimal() +
+  theme(text=element_text(family="sans"),
+        panel.spacing = unit(0, "lines")) +
+  facet_wrap(~ a, ncol = 1, scales = "free_y")
+
+```
+Et tortor consequat id porta nibh venenatis cras sed. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Et netus et malesuada fames ac turpis. Tempus quam pellentesque nec nam aliquam sem et. Et pharetra pharetra massa massa. Commodo sed egestas egestas fringilla phasellus faucibus. Leo duis ut diam quam nulla porttitor massa id. Erat velit scelerisque in dictum non consectetur a erat nam. Id aliquet lectus proin nibh nisl. Dolor morbi non arcu risus quis. Tempor id eu nisl nunc mi ipsum faucibus vitae. Ac auctor augue mauris augue neque. Bibendum neque egestas congue quisque egestas diam in.
+
+# `Human Dimensions`
+## `Seafood production`
+
+Tortor at auctor urna nunc id cursus metus aliquam. Tristique nulla aliquet enim tortor at auctor. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Bibendum at varius vel pharetra vel turpis nunc eget. Proin sagittis nisl rhoncus mattis. Sem fringilla ut morbi tincidunt augue interdum velit. Urna cursus eget nunc scelerisque. Leo duis ut diam quam nulla. Sagittis orci a scelerisque purus semper eget duis. Sed euismod nisi porta lorem mollis aliquam.
+
+Nisl condimentum id venenatis a condimentum vitae sapien. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Pellentesque habitant morbi tristique senectus et. Sollicitudin nibh sit amet commodo. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mauris a diam maecenas sed enim ut sem viverra aliquet. Blandit libero volutpat sed cras. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Risus nec feugiat in fermentum posuere urna. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Lectus mauris ultrices eros in cursus. Ut sem nulla pharetra diam sit. Sed viverra tellus in hac. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Nec dui nunc mattis enim ut tellus elementum. Dolor sed viverra ipsum nunc. Tempor nec feugiat nisl pretium fusce id velit. Mollis nunc sed id semper risus in. Egestas purus viverra accumsan in nisl.
+
+```{r}
+
+ggplot() +
+  geom_rect(data = rect_dat, aes(xmin = xmin,
+                                 xmax = xmax,
+                                 ymin = ymin,
+                                 ymax =ymax), fill = "grey40", alpha = 0.1) +
+  geom_point(data = df, aes(x, y)) +
+  geom_line(data = df, aes(x, y)) +
+  stat_smooth(data = df, formula = y ~ 1, aes(x = x, y = y, group = 1), method="lm", se = FALSE,
+            linetype = "longdash", color = "grey70") +
+  labs(x = "Year", 
+       y = "Indicator Value (T)",
+       title = "Serif font - theme_classic()") + 
+  # theme_ipsum() +
+  theme_classic() +
+  theme(text=element_text(family="serif")) +
+  facet_wrap(~ a, ncol = 1, scales = "free_y")
+
+```
+
+Et tortor consequat id porta nibh venenatis cras sed. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Et netus et malesuada fames ac turpis. Tempus quam pellentesque nec nam aliquam sem et. Et pharetra pharetra massa massa. Commodo sed egestas egestas fringilla phasellus faucibus. Leo duis ut diam quam nulla porttitor massa id. Erat velit scelerisque in dictum non consectetur a erat nam. Id aliquet lectus proin nibh nisl. Dolor morbi non arcu risus quis. Tempor id eu nisl nunc mi ipsum faucibus vitae. Ac auctor augue mauris augue neque. Bibendum neque egestas congue quisque egestas diam in.
+
+```{r}
+
+ggplot() +
+  geom_rect(data = rect_dat, aes(xmin = xmin,
+                                 xmax = xmax,
+                                 ymin = ymin,
+                                 ymax =ymax), fill = "grey40", alpha = 0.1) +
+  geom_point(data = df, aes(x, y)) +
+  geom_line(data = df, aes(x, y)) +
+  stat_smooth(data = df, formula = y ~ 1, aes(x = x, y = y, group = 1), method="lm", se = FALSE,
+            linetype = "longdash", color = "grey70") +
+  labs(x = "Year", 
+       y = "Indicator Value (T)",
+       title = "Serif font - theme_classic(), left aligned labels") + 
+  # theme_ipsum() +
+  theme_classic() +
+  theme(text=element_text(family="serif"),
+        strip.background = element_blank(),
+        strip.text=element_text(hjust = 0)) +
+  facet_wrap(~ a, ncol = 1, scales = "free_y")
+
+```
+
+
+Nisl condimentum id venenatis a condimentum vitae sapien. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Pellentesque habitant morbi tristique senectus et. Sollicitudin nibh sit amet commodo. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mauris a diam maecenas sed enim ut sem viverra aliquet. Blandit libero volutpat sed cras. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Risus nec feugiat in fermentum posuere urna. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Lectus mauris ultrices eros in cursus. Ut sem nulla pharetra diam sit. Sed viverra tellus in hac. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Nec dui nunc mattis enim ut tellus elementum. Dolor sed viverra ipsum nunc. Tempor nec feugiat nisl pretium fusce id velit. Mollis nunc sed id semper risus in. Egestas purus viverra accumsan in nisl.
+
+Et tortor consequat id porta nibh venenatis cras sed. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Et netus et malesuada fames ac turpis. Tempus quam pellentesque nec nam aliquam sem et. Et pharetra pharetra massa massa. Commodo sed egestas egestas fringilla phasellus faucibus. Leo duis ut diam quam nulla porttitor massa id. Erat velit scelerisque in dictum non consectetur a erat nam. Id aliquet lectus proin nibh nisl. Dolor morbi non arcu risus quis. Tempor id eu nisl nunc mi ipsum faucibus vitae. Ac auctor augue mauris augue neque. Bibendum neque egestas congue quisque egestas diam in.
