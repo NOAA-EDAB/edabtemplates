@@ -4,13 +4,16 @@
 \alias{soe_report}
 \title{PLOS journal format.}
 \usage{
-soe_report(..., keep_tex = TRUE,
+soe_report(..., keep_tex = TRUE, latex_engine = "xelatex",
   md_extensions = c("-autolink_bare_uris"))
 }
 \arguments{
 \item{...}{Additional arguments to \code{rmarkdown::pdf_document}}
 
 \item{keep_tex}{Keep the intermediate tex file used in the conversion to PDF}
+
+\item{latex_engine}{LaTeX engine for producing PDF output. Options are
+"pdflatex", "lualatex", and "xelatex".}
 
 \item{md_extensions}{Markdown extensions to be added or removed from the
 default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
