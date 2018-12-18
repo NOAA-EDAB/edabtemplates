@@ -13,10 +13,7 @@ Encoding: UTF-8
 URL: https://github.com/NOAA-EDAB/templates
 BugReports: https://github.com/NOAA-EDAB/templates/issues
 Imports: knitr,
-  rmarkdown,
-  yaml,
-  utils,
-  tinytex
+  rmarkdown
 Suggests:
   devtools
 RoxygenNote: 6.1.0
