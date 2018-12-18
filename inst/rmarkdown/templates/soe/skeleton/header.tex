@@ -8,6 +8,12 @@
   pdftitle = {title},
   pdflang = en-US}
 
+% Add accessibility support from http://www.richschwinn.com/accessibility
+\RequirePackage{accsupp}
+\RequirePackage{pdfcomment}
+\newcommand{\AccTool}[2]{\BeginAccSupp{method=pdfstringdef,unicode,Alt={{#1}}}\pdftooltip{{#2}}{{#1}}\EndAccSupp{}}
+
+
 % Set up the headers and footers
 \usepackage{graphicx}
 \usepackage{fancyhdr}

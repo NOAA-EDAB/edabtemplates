@@ -8,8 +8,6 @@ output:
         in_header: header.tex
 geometry: "left=2cm, right=2cm, top=2cm, bottom=3cm, footskip = .5cm"
 fontsize: 11pt
-mainfont: Garamond
-monofont: Calibri
 ---
 
 ```{r setup, include=FALSE}
