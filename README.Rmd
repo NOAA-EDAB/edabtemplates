@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# templates
+
+An R package for Rmarkdown templates. Currently includes:
+
+* SOE template (not 508 Compliant)
+* SOE template (508 Compliant) *in progress*
+* ... 
+
+## Installation
+
+To install the package, run:
+
+```{r}
+remotes::install_github("NOAA-EDAB/templates")
+```
+
+
+## Example
+
+To create a new State of the Ecosystem template, simply:
+```{r example, eval = FALSE}
+library(templates)
+rmarkdown::draft(file = "soe_report.Rmd",
+                 template = "soe", 
+                 package = "templates")
+
+```
+
+or, after installing the package, click on `create new Rmarkdown document` in Rstudio
+to have access to the templates. 
+
+See [Templates for Rmarkdown](http://rmarkdown.rstudio.com/developer_document_templates.html) for more information.
+
+---
+
