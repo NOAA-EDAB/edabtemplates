@@ -5,14 +5,14 @@ library(knitr)
 library(tools)
 
 # reads the intermediate tex file
-input = readLines("accessibility_example.tex")
+input = readLines("drafts/508_test/508_test.tex")
 
 # adds selected tags
 output =
   # The fixed commands turns off regular expression processing.
   gsub(
-    "\\includegraphics{accessibility_example_files/figure-latex/diamonds-1.pdf}",
-    "\\AccTool{This is a beutiful plot of the prices of 5,000 round cut diamonds}{\\includegraphics{accessibility_example_files/figure-latex/diamonds-1.pdf}}",
+    "\\includegraphics{508_test_files/figure-latex/diamonds-1.pdf}",
+    "\\AccTool{This is a beutiful plot of the prices of 5,000 round cut diamonds}{\\includegraphics{508_test_files/figure-latex/diamonds-1.pdf}}",
     input,
     fixed = T
   ) %>%
@@ -23,7 +23,7 @@ output =
        .)
 
 # You can mannually add accessibilty tags without tooltips using \BeginAccSupp and \EndAccSupp
-writeLines(output, "processed_accessibility_example.tex")
-texi2pdf("processed_accessibility_example.tex", clean = T)
+writeLines(output, "drafts/508_test/processed_508_test.tex")
+tools::texi2pdf("drafts/508_test/processed_508_test.tex", clean = T)
 
 
