@@ -20,6 +20,23 @@
 \usepackage{ifthen}
 \usepackage{everypage}
 
+% Avoid struggling over figure and table float in Rmarkdown
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+\let\origtable\table
+\let\endorigtable\endtable
+\renewenvironment{table}[1][2] {
+    \expandafter\origtable\expandafter[H]
+} {
+    \endorigtable
+}
+
 \pagestyle{fancy}
 \fancyhf{}
 \setlength\headheight{40pt}
