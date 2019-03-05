@@ -1,13 +1,12 @@
-Package: templates
+Package: edabtemplates
 Type: Package
 Title: Rmarkdown templates for SOE report, etc
 Version: 0.0.1
 Author: Scott Large <scott.large@noaa.gov>
 Maintainer: Scott Large <scott.large@noaa.gov>
 Description: A collection of Rmarkdown templates with an intent to improve accessibility 
-  (e.g., 508 Compliance). After installing the package, click on `create new Rmarkdown document` in
-  Rstudio to have access to the templates. See https://rmarkdown.rstudio.com/
-  for more information.
+  (e.g., 508 Compliance). See README for instructions on how to create a new Rmarkdown template.
+  See https://rmarkdown.rstudio.com/ for more information.
 License: CC0
 Encoding: UTF-8
 URL: https://github.com/NOAA-EDAB/templates
@@ -15,5 +14,5 @@ BugReports: https://github.com/NOAA-EDAB/templates/issues
 Imports: knitr,
   rmarkdown
 Suggests:
-  devtools
+  remotes
 RoxygenNote: 6.1.0
