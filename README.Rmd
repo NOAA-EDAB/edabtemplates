@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# templates
+# edabtemplates
 
 An R package for Rmarkdown templates. Currently includes:
 
@@ -24,8 +24,8 @@ An R package for Rmarkdown templates. Currently includes:
 
 To install the package, run:
 
-```{r}
-remotes::install_github("NOAA-EDAB/templates")
+```{r, message = FALSE}
+remotes::install_github("NOAA-EDAB/edabtemplates")
 ```
 
 
@@ -33,10 +33,12 @@ remotes::install_github("NOAA-EDAB/templates")
 
 To create a new State of the Ecosystem template, simply:
 ```{r example, eval = FALSE}
-library(templates)
-rmarkdown::draft(file = "soe_report.Rmd",
-                 template = "soe", 
-                 package = "templates")
+library(edabtemplates)
+
+create_template(file = "soe_test.Rmd",
+                date = NULL, 
+                title = "State of the Ecosystem 2019: New England", 
+                running_head = "State of the Ecosystem 2019: New England")
 
 ```
 
