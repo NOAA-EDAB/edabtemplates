@@ -1,8 +1,7 @@
 % Set up the fonts
-\usepackage{fontspec}
-\setmainfont{Garamond}
-\newfontfamily\headingfont[]{Calibri}[Scale=1.4]
-\renewcommand{\maketitlehooka}{\headingfont}
+\usepackage[urw-palatino]{mathdesign}
+\usepackage[T1]{fontenc}
+
 
 % Set the language for 508
 \hypersetup{
@@ -16,9 +15,49 @@
 
 % Set up the headers and footers
 \usepackage{graphicx}
-%\usepackage{stackengine} % For \stackunder command
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{everypage}
+\usepackage{float}
 
-% Add logo to the heading
-\usepackage{titling}
-\pretitle{\begin{flushleft}}
-\posttitle{\hfill\includegraphics[width = 40pt]{NOAA_logo.png}\par\end{flushleft}}
+% First page has the large title and NOAA logo
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{40pt}
+\cfoot{\thepage}
+
+\AddEverypageHook{%
+   \ifthenelse{\value{page}=1}%
+     {\rhead{\includegraphics[width=40pt]{NOAA_logo.png} \\ \textsf{\emph{Published DATE}}}
+      \lhead{\textsf{\LARGE TITLE}}
+      }%
+     {\rhead{}
+      \lhead{\textsf{\emph{RUNNING HEAD}}}
+     }
+}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+% Change section labels to san serif
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\sffamily\bfseries}
+
+% Avoid struggling over figure and table float in Rmarkdown
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+\let\origtable\table
+\let\endorigtable\endtable
+\renewenvironment{table}[1][2] {
+    \expandafter\origtable\expandafter[H]
+} {
+    \endorigtable
+}
+
