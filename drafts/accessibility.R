@@ -3,16 +3,35 @@
 library(dplyr)
 library(knitr)
 library(tools)
+library(rmarkdown)
+install.packages("here")
+library(here)
+# knitr::knit(input = "drafts/508_test/508_test.Rmd",
+#             output ="drafts/508_test/508_test.tex")
+path.expand("drafts/508_test/508_test.Rmd")
+
+
+rmarkdown::render(input = here("drafts", "508_test", "508_test.Rmd"),
+                  output_format = latex_document(latex_engine = "xelatex",
+                                                 includes = list(in_header = "header.tex")),
+                  output_file = here("drafts", "508_test","508_test.tex"))
 
 # reads the intermediate tex file
-input = readLines("drafts/508_test/508_test.tex")
+input = readLines( here("drafts", "508_test","508_test.tex"))
 
 # adds selected tags
+accessible_caption <- "Now this is an accessible caption!!"
+fig_path <- here()
+
+
 output =
+  sprintf("\\AccTool{%s}{\\%s}}", accessible_caption, fig_path)
+
+
   # The fixed commands turns off regular expression processing.
   gsub(
-    "\\includegraphics{508_test_files/figure-latex/diamonds-1.pdf}",
-    "\\AccTool{This is a beutiful plot of the prices of 5,000 round cut diamonds}{\\includegraphics{508_test_files/figure-latex/diamonds-1.pdf}}",
+    "\\includegraphics{C:/Users/scott.large/Documents/projects/templates/drafts/508_test_files/figure-latex/diamonds-1.pdf}", ## replace bad with
+    "\\AccTool{This is a beautiful plot of the prices of 5,000 round cut diamonds}{\\includegraphics{508_test_files/figure-latex/diamonds-1.pdf}}", ## the good
     input,
     fixed = T
   ) %>%
